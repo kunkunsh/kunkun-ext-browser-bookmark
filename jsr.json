@@ -1,5 +1,5 @@
 {
-  "name": "@kunkun/kunkun-ext-ip-info",
+  "name": "@kunkun/kunkun-ext-browser-bookmark",
   "version": "0.0.3",
   "license": "MIT",
   "exports": "./mod.ts",
