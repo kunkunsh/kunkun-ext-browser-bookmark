@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "@kunkun/api": "jsr:@kunkun/api@^0.0.52",
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}

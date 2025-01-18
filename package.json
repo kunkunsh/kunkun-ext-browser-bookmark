@@ -1,0 +1,116 @@
+{
+  "$schema": "https://schema.kunkun.sh",
+  "license": "MIT",
+  "name": "kunkun-ext-browser-bookmark",
+  "version": "0.0.3",
+  "repository": "https://github.com/kunkunsh/kunkun-ext-browser-bookmark",
+  "type": "module",
+  "kunkun": {
+    "name": "Browser Bookmark",
+    "shortDescription": "List Browser Bookmarks",
+    "longDescription": "Show a list of Browser Bookmarks",
+    "identifier": "browser-bookmark",
+    "permissions": [
+      "shell:stdin-write",
+      "shell:kill",
+      {
+        "permission": "fs:read",
+        "allow": [
+          {
+            "path": "$HOME/Library/Application Support/Google/Chrome/Default/Bookmarks"
+          },
+          {
+            "path": "$HOME/Library/Application Support/Microsoft Edge/Default/Bookmarks"
+          }
+        ]
+      },
+      {
+        "permission": "fs:exists",
+        "allow": [
+          {
+            "path": "$HOME/Library/Application Support/Firefox/Profiles"
+          },
+          {
+            "path": "$HOME/Library/Application Support/Firefox/Profiles/**"
+          }
+        ]
+      },
+      {
+        "permission": "fs:read-dir",
+        "allow": [
+          {
+            "path": "$HOME/Library/Application Support/Firefox/Profiles"
+          },
+          {
+            "path": "$HOME/Library/Application Support/Firefox/Profiles/**"
+          }
+        ]
+      },
+      {
+        "permission": "open:url",
+        "allow": [
+          {
+            "url": "http://**"
+          },
+          {
+            "url": "https://**"
+          }
+        ]
+      },
+      {
+        "permission": "shell:deno:spawn",
+        "allow": [
+          {
+            "path": "$EXTENSION/deno-src/index.ts",
+            "env": [
+              "DENO_SQLITE_PATH",
+              "DENO_SQLITE_LOCAL",
+              "DENO_DIR",
+              "HOME",
+              "DENO_DENO"
+            ],
+            "read": "*",
+            "ffi": "*"
+          }
+        ]
+      }
+    ],
+    "demoImages": [],
+    "icon": {
+      "type": "iconify",
+      "value": "material-symbols:bookmark"
+    },
+    "customUiCmds": [],
+    "templateUiCmds": [
+      {
+        "name": "Browser Bookmarks",
+        "main": "dist/index.js",
+        "cmds": []
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "bun build.ts dev",
+    "build": "bun build.ts"
+  },
+  "dependencies": {
+    "@kksh/api": "^0.0.48",
+    "i18next": "^23.15.1",
+    "valibot": "^0.40.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "json-to-valibot": "^0.1.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist",
+    "deno-src",
+    "README.md",
+    "package.json",
+    "mod.ts"
+  ],
+  "packageManager": "pnpm@9.14.2"
+}
