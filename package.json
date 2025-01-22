@@ -2,7 +2,11 @@
   "$schema": "https://schema.kunkun.sh",
   "license": "MIT",
   "name": "kunkun-ext-browser-bookmark",
-  "version": "0.0.3",
+  "author": {
+    "name": "Huakun",
+    "url": "https://huakunshen.com"
+  },
+  "version": "0.0.4",
   "repository": "https://github.com/kunkunsh/kunkun-ext-browser-bookmark",
   "type": "module",
   "kunkun": {
