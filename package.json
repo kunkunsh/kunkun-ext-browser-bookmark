@@ -6,7 +6,7 @@
     "name": "Huakun",
     "url": "https://huakunshen.com"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository": "https://github.com/kunkunsh/kunkun-ext-browser-bookmark",
   "type": "module",
   "kunkun": {
