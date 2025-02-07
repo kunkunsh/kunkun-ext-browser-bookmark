@@ -1,4 +1,4 @@
-import { os } from "@kksh/api/ui/worker"
+import { os } from "@kksh/api/ui/template"
 import * as v from "valibot"
 
 export type Platform = Awaited<ReturnType<typeof os.platform>>

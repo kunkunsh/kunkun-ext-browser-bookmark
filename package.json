@@ -6,7 +6,7 @@
     "name": "Huakun",
     "url": "https://huakunshen.com"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": "https://github.com/kunkunsh/kunkun-ext-browser-bookmark",
   "type": "module",
   "kunkun": {
@@ -98,7 +98,7 @@
     "build": "bun build.ts"
   },
   "dependencies": {
-    "@kksh/api": "^0.0.48",
+    "@kksh/api": "^0.1.1",
     "i18next": "^23.15.1",
     "valibot": "^0.40.0"
   },

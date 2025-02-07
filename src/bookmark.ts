@@ -1,4 +1,4 @@
-import { fs, os, path, shell, toast } from "@kksh/api/ui/worker"
+import { fs, os, path, shell, toast } from "@kksh/api/ui/template"
 import * as v from "valibot"
 import { ChromeBookmarksFile } from "./types"
 import type { Browser, ChromeBookmark, Platform } from "./types"
